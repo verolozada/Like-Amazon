@@ -1,0 +1,20 @@
+{
+  "name": "Like-Amazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verolozada/Like-Amazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verolozada/Like-Amazon/issues"
+  },
+  "homepage": "https://github.com/verolozada/Like-Amazon#readme"
+}
