@@ -53,6 +53,7 @@ const askItem = () => {
                 if (err) throw err;
                 if (idQuantity > quantity) {
                     console.log('Insufficient quantity!');
+                    askItem();
                 } else {
                     const newStock = quantity - idQuantity;
                     connection.query(query2,
