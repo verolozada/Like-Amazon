@@ -77,7 +77,7 @@ const viewInv = () => {
                         console.log(`ID: ${res[0].item_id} || Product: ${res[0].product_name} || Department: ${res[0].department_name} || Price: ${res[0].price} || Quantities: ${res[0].stock_quantity}`)
                     })
             }
-            // options();
+            //  options();
         }
     )
 }

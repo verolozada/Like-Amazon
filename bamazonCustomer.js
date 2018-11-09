@@ -1,6 +1,8 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 
+//cli-table
+
 const connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
