@@ -1,7 +1,12 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
+// const Table = require('cli-table');
 
-//cli-table
+// // instantiate
+// const table = new Table({
+//     head: ['ID', 'Product Name', 'Price', 'Quantity Available']
+//   , colWidths: [20, 20]
+// });
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -20,7 +25,7 @@ const showTable = () => {
     connection.query(
         'SELECT * FROM products', ((err, res) => {
             for (let i = 0; i < res.length; i++) {
-                console.log(`ID: ${res[i].item_id} || Product Name: ${res[i].product_name} || Price: ${res[i].price}`)
+                console.log(`ID: ${res[i].item_id} || Product Name: ${res[i].product_name} || Price: ${res[i].price} || Quantity: ${res[i].stock_quantity} `)
             }
             console.log('');
             askItem();
@@ -33,7 +38,7 @@ const askItem = () => {
         {
             name: 'item',
             type: 'input',
-            message: 'Please type the item number of the product you would like to buy'
+            message: 'Please type the item number of the product you would like to buy:'
         },
         {
             name: 'quantity',
@@ -65,11 +70,12 @@ const askItem = () => {
                         {
                             item_id: idNumber
                         }],
-                        (err, res)=>{
+                        (err, res) => {
                             if (err) throw err;
                             console.log(`${res.affectedRows} item updated! \n`)
                             const bill = price * idQuantity;
-                            console.log(` Total: $${bill}`);
+                            console.log(` Your total is: $${bill}`);
+                            start();
                         }
                     )
                 }
@@ -78,4 +84,18 @@ const askItem = () => {
     })
 }
 
-
+const start = () => {
+    console.log('');
+    inquirer.prompt({
+        name: 'start',
+        type: 'list',
+        message: 'Would you like to start over?',
+        choices: ['YES', 'NO']
+    }).then((answer) => {
+        if (answer.start === 'YES') {
+            showTable();
+        } else {
+            console.log('Please type ^C');
+        }
+    })
+}

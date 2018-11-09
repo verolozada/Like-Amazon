@@ -1,5 +1,13 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
+const Table = require('cli-table');
+ 
+// instantiate
+const table = new Table({
+    head: ['ID', 'Product Name', 'Price', 'Quantity Available']
+  , colWidths: [20, 20]
+});
+ 
 
 const connection = mysql.createConnection({
     host: 'localhost',
