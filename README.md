@@ -30,5 +30,5 @@ You will have for options:
 - Add a new product folowing the characteristics required. 
 
 
-#### Example video for customer: [Video link](https://drive.google.com/file/d/1X2HYQ_sr-tmZF60ul9itYuG5bR6K0WeH/view)
+#### Example video for manager: [Video link](https://drive.google.com/file/d/1X2HYQ_sr-tmZF60ul9itYuG5bR6K0WeH/view)
 
