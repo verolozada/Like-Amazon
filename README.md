@@ -23,7 +23,7 @@ You will have for options:
 #### View Low Inventory;
 - View all the items with less than 5 units available.
 
-#### Add to inventoru:
+#### Add to Inventory:
 - You can manage the number of quantities available for an specific item, by selecting the Item ID and entering the amount to be added.
 
 #### Add New Product:
